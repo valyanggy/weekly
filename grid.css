@@ -1,0 +1,167 @@
+* {
+    box-sizing: border-box;
+}
+
+
+@font-face {
+    font-family: "GARCIA";
+    src: url("/fonts/GARCIA-Regular.otf") format("otf");
+}
+
+
+body {
+    overflow: scroll;
+    margin: 10px;
+    background-color: #000000;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+canvas {
+    opacity: 0;
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 1;
+    pointer-events: auto !important;
+    pointer-events: none;
+}
+
+/* .physicsDiv {
+    border-radius: 100px;
+    margin: 10px;
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    left: 0;
+    width: 20px;
+    cursor: gray !important;
+    box-shadow: 1px 1px 2px 1px #000;
+    transform-origin: center;
+    background-color: #000000;
+    border: 2px solid rgb(255, 255, 255);
+    padding: 1px;
+} */
+
+.autoWidth {
+    width: auto;
+}
+
+.smol {
+    width: 90px;
+}
+
+h1,
+h2,
+h3 {
+    color: #ffffff;
+}
+
+.grid {
+    display: flex;
+    width: 100%;
+    max-height: 50%;
+    margin: 0 auto;
+    flex-flow: row wrap;
+    overflow-y: scroll;
+    /* margin-top: 10%; */
+
+}
+
+.grid-container {
+    width: 10%;
+    transition: transform .1s ease;
+
+
+}
+
+.container {
+    z-index: 10;
+    position: relative;
+    text-transform: none;
+    /* margin-top: 1000px; */
+   
+}
+
+.container img {
+    height: 10%;
+    width: auto;
+    clip-path: path('M 0 200 L 0,75 A 5,5 0,0,1 150,75 L 200 200 z');
+
+}
+
+.container p {
+    font-size: 1em;
+}
+
+.navigation {
+    z-index: 11;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 8%;
+    text-align: center;
+    margin-top: 10px;
+    position: sticky;
+    top: 0px;
+    mix-blend-mode: difference;
+
+}
+
+
+.nav-element {
+    width: 300px;
+    line-height: 95%;
+}
+
+
+
+.background-text {
+    z-index: -1;
+}
+
+#big-text {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0 auto;
+    max-width: 50%;
+
+}
+
+#big-text p {
+    font-size: 10vw;
+    line-height: 90%;
+    font-style: italic;
+    letter-spacing: -8px;
+
+}
+
+#mask {
+
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+#mask img {
+
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+
+
+}
